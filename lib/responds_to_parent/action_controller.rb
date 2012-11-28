@@ -20,6 +20,7 @@ module RespondsToParent
 
         # We're returning HTML instead of JS or XML now
         response.headers['Content-Type'] = 'text/html; charset=UTF-8'
+        @performed_render = false
 
         # Eval in parent scope and replace document location of this frame 
         # so back button doesn't replay action on targeted forms
